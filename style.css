@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* PARTICLES FIX */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.left h1 {
+    font-size: 45px;
+}
+
+.left h2 {
+    color: #00ff00;
+    margin: 10px 0;
+}
+
+.left p {
+    opacity: 0.8;
+}
+
+.social a {
+    color: #00ff00;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: white;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00ff00;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* PROFILE IMAGE */
+.right img {
+    width: 260px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00ff00;
+    cursor: pointer;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    padding: 20px 40px;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* MODAL FIX (MAIN ISSUE FIXED HERE) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+
+    /* 🔥 CENTER FIX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HIDE BY DEFAULT */
+.modal.hide {
+    display: none;
+}
+
+.modal-content {
+    background: #111;
+    padding: 30px;
+    border: 1px solid #00ff00;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff00;
+    animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* CLOSE BUTTON */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #00ff00;
+    margin-top: 40px;
+}
